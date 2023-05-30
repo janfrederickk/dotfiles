@@ -18,10 +18,11 @@ alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 alias sZ="source ~/.zshrc"
 alias eZ="chezmoi edit ~/.zshrc"
-#test
 alias sT="tmux source-file ~/.config/tmux/tmux.conf"
 
 alias flux="~/opt/flux/flux"
+
+alias asdf-install="sh ~/dev/jan/scripts/asdf-install.sh"
 
 #source ~/powerlevel10k/powerlevel10k.zsh-theme
 
