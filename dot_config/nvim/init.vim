@@ -29,6 +29,8 @@ set ttyfast                 " Speed up scrolling in Vim
 " set noswapfile            " disable creating swap file
 " set backupdir=~/.cache/vim " Directory to store backup files
 
+autocmd BufWritePost ~/.local/share/chezmoi/* ! chezmoi apply --source-path "%"
+
 call plug#begin("~/.config/nvim/plugged")
  " Plugin Section
  Plug 'dracula/vim'
