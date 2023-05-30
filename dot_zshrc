@@ -15,7 +15,7 @@ alias l="ls -lha"
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 alias sZ="source ~/.zshrc"
-alias eZ="vi ~/.zshrc"
+alias eZ="chezmoi edit ~/.zshrc"
 
 alias sT="tmux source-file ~/.config/tmux/tmux.conf"
 
