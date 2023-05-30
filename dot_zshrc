@@ -1,0 +1,57 @@
+autoload -U compinit
+
+compinit
+
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+#if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+#  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+#fi
+
+alias ls="lsd"
+alias l="ls -lha"
+
+alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
+alias sZ="source ~/.zshrc"
+alias eZ="vi ~/.zshrc"
+
+alias sT="tmux source-file ~/.config/tmux/tmux.conf"
+
+alias flux="~/opt/flux/flux"
+
+#source ~/powerlevel10k/powerlevel10k.zsh-theme
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+#[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+#alias vi='nvim'
+alias vim='nvim'
+
+# Load Alias
+source ~/.config/alias/terraform
+source ~/.config/alias/git
+source ~/.config/alias/kubectl
+source ~/.config/alias/markant
+
+# Load zsh plugins
+source ~/dev/git/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+source ~/dev/git/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+source ~/.config/zsh/functions.zsh
+source ~/.config/zsh/web-search.plugin.zsh
+source ~/.config/zsh/web-search.plugin.zsh
+source ~/.config/zsh/kubectlcompletion.zsh
+
+# Autocompletes
+source <(kubectl completion zsh)
+source <(helm completion zsh)
+source <(flux completion zsh)
+source <(chezmoi completion zsh)
+#source <(/opt/homebrew/opt/asdf/libexec/completions zsh)
+
+export GREP_OPTIONS='--color=always'
+
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
+
+eval "$(starship init zsh)"
