@@ -1,0 +1,38 @@
+
+# Font configuration
+font:
+  normal:
+    family: "MesloLGS NF"
+
+    # The `style` can be specified to pick a specific face.
+    style: Regular
+
+  bold:
+    family: "MesloLGS NF"
+    style: Bold
+
+  italic:
+    family: "MesloLGS NF"
+
+    style: italic
+
+  bold_italic:
+    family: "MesloLGS NF"
+
+    style: Bold Italic
+
+  # Point size
+  size: 13.0
+
+import:
+ - ~/.config/alacritty/themes/afterglow.yaml
+
+  # Cursor colors
+  #
+  # Colors which should be used to draw the terminal cursor.
+  #
+  # Allowed values are CellForeground/CellBackground, which reference the
+  # affected cell, or hexadecimal colors like #ff00ff.
+  #cursor:
+  #  text: CellBackground
+  #  cursor: CellForeground

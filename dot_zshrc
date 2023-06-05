@@ -55,6 +55,8 @@ source <(chezmoi completion zsh)
 
 export GREP_OPTIONS='--color=always'
 
+alias teectl="~/bin/teectl"
+
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
 
 eval "$(starship init zsh)"
