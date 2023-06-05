@@ -22,7 +22,7 @@ symbol = 'ﴃ '
 style = 'blue bold'
 
 [kubernetes]
-format = 'on [☸️  $context|$namespace](bright-purple) '
+format = 'on [  $context|$namespace](bright-purple) '
 disabled = false
 
 [git_branch]
