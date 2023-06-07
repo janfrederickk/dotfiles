@@ -14,7 +14,7 @@ alias cat="bat"
 alias ls="lsd"
 alias l="ls -lha"
 
-alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias dotfiles='cd ~/.local/share/chezmoi'
 
 alias sZ="source ~/.zshrc"
 alias eZ="chezmoi edit ~/.zshrc"
@@ -23,6 +23,7 @@ alias sT="tmux source-file ~/.config/tmux/tmux.conf"
 alias flux="~/opt/flux/flux"
 
 alias asdf-install="sh ~/dev/jan/scripts/asdf-install.sh"
+alias asdf="~/dev/asdf/asdf.sh"
 
 #source ~/powerlevel10k/powerlevel10k.zsh-theme
 
@@ -34,17 +35,40 @@ alias vim='nvim'
 # Load Alias
 source ~/.config/alias/terraform
 source ~/.config/alias/git
-source ~/.config/alias/kubectl
-source ~/.config/alias/markant
+source ~/.config/alias/chezmoi
+
+if [ -f ~/.config/alias/kubectl]; then
+    source ~/.config/alias/kubectl
+fi
+
+if [ -f ~/.config/alias/markant]; then
+    source ~/.config/alias/markant
+fi
 
 # Load zsh plugins
-source ~/dev/git/zsh-autocomplete/zsh-autocomplete.plugin.zsh
-source ~/dev/git/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+if [ -f ~/dev/git/zsh-autocomplete=zsh-autocomplete.plugin.zsh]; then
+    source ~/dev/git/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+fi
 
-source ~/.config/zsh/functions.zsh
-source ~/.config/zsh/web-search.plugin.zsh
-source ~/.config/zsh/web-search.plugin.zsh
-source ~/.config/zsh/kubectlcompletion.zsh
+if [ -f ~/dev/git/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh]; then
+    source ~/dev/git/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fi
+
+if [ -f ~/.config/zsh/functions.zsh]; then
+    source ~/.config/zsh/functions.zsh
+fi
+
+if [ -f ~/.config/zsh/web-search.plugin.zsh]; then
+    source ~/.config/zsh/web-search.plugin.zsh
+fi
+
+if [ -f ~/.config/zsh/web-search.plugin.zsh]; then
+    source ~/.config/zsh/web-search.plugin.zsh
+fi
+
+if [ -f ~/.config/zsh/kubectlcompletion.zsh]; then
+    source ~/.config/zsh/kubectlcompletion.zsh
+fi
 
 # Autocompletes
 source <(kubectl completion zsh)
@@ -57,6 +81,6 @@ export GREP_OPTIONS='--color=always'
 
 alias teectl="~/bin/teectl"
 
-. /opt/homebrew/opt/asdf/libexec/asdf.sh
+. ~/dev/asdf/asdf.sh
 
 eval "$(starship init zsh)"
