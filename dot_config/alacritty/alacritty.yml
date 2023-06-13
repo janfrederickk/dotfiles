@@ -27,6 +27,9 @@ font:
 import:
  - ~/.config/alacritty/themes/afterglow.yaml
 
+window:
+  opacity: 0.9
+
   # Cursor colors
   #
   # Colors which should be used to draw the terminal cursor.
