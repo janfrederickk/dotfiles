@@ -46,13 +46,9 @@ if [ -f ~/.config/alias/markant]; then
 fi
 
 # Load zsh plugins
-if [ -f ~/dev/git/zsh-autocomplete=zsh-autocomplete.plugin.zsh]; then
-    source ~/dev/git/zsh-autocomplete/zsh-autocomplete.plugin.zsh
-fi
+source ~/dev/git/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
-if [ -f ~/dev/git/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh]; then
-    source ~/dev/git/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-fi
+source ~/dev/git/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 if [ -f ~/.config/zsh/functions.zsh]; then
     source ~/.config/zsh/functions.zsh
@@ -69,6 +65,8 @@ fi
 if [ -f ~/.config/zsh/kubectlcompletion.zsh]; then
     source ~/.config/zsh/kubectlcompletion.zsh
 fi
+
+#source ~/.config/zsh/zsh-syntax-highlighting.zsh
 
 # Autocompletes
 source <(kubectl completion zsh)
