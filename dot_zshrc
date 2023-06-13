@@ -36,35 +36,21 @@ alias vim='nvim'
 source ~/.config/alias/terraform
 source ~/.config/alias/git
 source ~/.config/alias/chezmoi
-
-if [ -f ~/.config/alias/kubectl]; then
-    source ~/.config/alias/kubectl
-fi
-
-if [ -f ~/.config/alias/markant]; then
-    source ~/.config/alias/markant
-fi
+source ~/.config/alias/kubectl
+source ~/.config/alias/markant
 
 # Load zsh plugins
 source ~/dev/git/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
 source ~/dev/git/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-if [ -f ~/.config/zsh/functions.zsh]; then
-    source ~/.config/zsh/functions.zsh
-fi
+source ~/.config/zsh/functions.zsh
 
-if [ -f ~/.config/zsh/web-search.plugin.zsh]; then
-    source ~/.config/zsh/web-search.plugin.zsh
-fi
+source ~/.config/zsh/web-search.plugin.zsh
 
-if [ -f ~/.config/zsh/web-search.plugin.zsh]; then
-    source ~/.config/zsh/web-search.plugin.zsh
-fi
+source ~/.config/zsh/web-search.plugin.zsh
 
-if [ -f ~/.config/zsh/kubectlcompletion.zsh]; then
-    source ~/.config/zsh/kubectlcompletion.zsh
-fi
+source ~/.config/zsh/kubectlcompletion.zsh
 
 #source ~/.config/zsh/zsh-syntax-highlighting.zsh
 

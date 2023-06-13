@@ -1,0 +1,8 @@
+alias cdinf="cd ~/dev/dmf/infrastructure"
+alias cdwiki="cd ~/dev/dmf/wiki"
+alias cddepl="cd ~/dev/dmf/datahub-deployment"
+
+rdmfsec() {
+    export TF_VAR_client_secret="`az keyvault secret show --name dmf-tf-service-principal-secret --vault kv-initmarkantdevops  --query value -o tsv`"
+}
+
