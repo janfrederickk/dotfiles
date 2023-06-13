@@ -75,6 +75,7 @@ source <(kubectl completion zsh)
 source <(helm completion zsh)
 source <(flux completion zsh)
 source <(chezmoi completion zsh)
+source <(docker completion zsh)
 #source <(/opt/homebrew/opt/asdf/libexec/completions zsh)
 
 export GREP_OPTIONS='--color=always'
