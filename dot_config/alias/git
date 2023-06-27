@@ -3,6 +3,30 @@ function gcp(){
     git push
 }
 
+function gcm(){
+    local branch
+    branch=$(git symbolic-ref --short HEAD 2>/dev/null)
+
+    local commit
+
+    if [[ "$branch" == "main" ]]; then
+        read -q "REPLY?Current Git branch is 'main'. Continue? (y/n) "
+        echo
+        if [[ "$REPLY" =~ ^[Yy]$ ]]; then
+            commit=1
+        else
+            echo "Aborted."
+            return 1  # Branch is 'main', but user chose to abort
+        fi
+    else
+        commit=1
+    fi
+
+    if [[ "$commit" == "1" ]]; then
+        git commit -m $1
+    fi
+}
+
 alias gs="git status"
 alias ga="git add"
 alias gaa="git add ."
