@@ -15,3 +15,5 @@ alias gco="git checkout"
 alias gcom="git checkout main"
 
 alias gsoc="git diff ORIG_HEAD HEAD"
+
+alias gitroot='cd $(git rev-parse --show-toplevel)'
