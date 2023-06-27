@@ -13,6 +13,12 @@ function gpsub(){
     git branch --set-upstream-to=origin/$(git branch --show-current) $(git branch --show-current)
 }
 
+function gsic(){
+    git diff --stat origin/$(git branch --show-current);
+    read -s -k '?Press any key to continue.'
+    git diff origin/$(git branch --show-current);
+}
+
 alias gf="git fetch"
 alias gp="git pull"
 
