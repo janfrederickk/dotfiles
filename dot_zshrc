@@ -11,8 +11,6 @@ compinit
 #  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 #fi
 
-alias chezmoi="~/bin/chezmoi"
-
 alias cat="bat"
 
 alias ls="lsd"
