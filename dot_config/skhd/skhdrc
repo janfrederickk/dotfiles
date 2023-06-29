@@ -1,0 +1,40 @@
+# move window to space #
+shift + alt - 1 : yabai -m window --space 1;
+shift + alt - 2 : yabai -m window --space 2;
+shift + alt - 3 : yabai -m window --space 3;
+shift + alt - 4 : yabai -m window --space 4;
+shift + alt - 5 : yabai -m window --space 5;
+shift + alt - 6 : yabai -m window --space 6;
+shift + alt - 7 : yabai -m window --space 7;
+shift + alt - 8 : yabai -m window --space 8;
+shift + alt - 9 : yabai -m window --space 9;
+shift + alt - 0 : yabai -m window --space 10;
+
+# Window Navigation (through display borders): lalt - {j, k, l, ö}
+lalt - j    : yabai -m window --focus west  || yabai -m display --focus west
+lalt - k    : yabai -m window --focus south || yabai -m display --focus south
+lalt - l    : yabai -m window --focus north || yabai -m display --focus north
+lalt - 0x29 : yabai -m window --focus east  || yabai -m display --focus east
+
+# Moving windows
+ctrl + alt - left : yabai -m window --swap west
+ctrl + alt - down : yabai -m window --swap south
+ctrl + alt - up : yabai -m window --swap north
+ctrl + alt - right : yabai -m window --swap east
+
+# Navigation
+shift + alt - j : yabai -m window --focus west
+shift + alt - k : yabai -m window --focus south
+shift + alt - i : yabai -m window --focus north
+shift + alt - l : yabai -m window --focus east
+
+# toggle fullscreen
+shift + alt - f : yabai -m window --toggle zoom-fullscreen
+
+# restart yabai
+shift + alt - y : yabai --restart-service;
+shift + alt - s : sketchybar --remove '/.*/' && sh -c 'export CONFIG_DIR=$HOME/.config/sketchybar && $CONFIG_DIR/sketchybarrc'
+
+
+# misc
+ctrl -t : alacritty msg create-window
