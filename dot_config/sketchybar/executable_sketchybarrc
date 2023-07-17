@@ -3,11 +3,6 @@
 source "$CONFIG_DIR/colors.sh" # Loads all defined colors
 #source "$CONFIG_DIR/icons.sh" # Loads all defined icons
 
-# This is a demo config to show some of the most important commands more easily.
-# This is meant to be changed and configured, as it is intentionally kept sparse.
-# For a more advanced configuration example see my dotfiles:
-# https://github.com/FelixKratz/dotfiles
-
 PADDINGS=5
 FONT="JetBrainsMono Nerd Font" # Needs to have Regular, Bold, Semibold, Heavy and Black variants
 
@@ -30,7 +25,7 @@ bar=(
   blur_radius=30
   color=$BAR_COLOR
   shadow=off
-  position=top
+  position=bottom
   margin=-2
   y_offset=-2
 )
@@ -73,11 +68,13 @@ source "$ITEM_DIR/front_app.sh"
 source "$ITEM_DIR/spotify.sh"
 
 # Right
-source "$ITEM_DIR/calendar.sh"
-source "$ITEM_DIR/brew.sh"
-source "$ITEM_DIR/github.sh"
-source "$ITEM_DIR/battery.sh"
-source "$ITEM_DIR/volume.sh"
+#source "$ITEM_DIR/calendar.sh"
+#source "$ITEM_DIR/brew.sh"
+#source "$ITEM_DIR/github.sh"
+#source "$ITEM_DIR/battery.sh"
 source "$ITEM_DIR/cpu.sh"
+source "$ITEM_DIR/volume.sh"
+source "$ITEM_DIR/mic.sh"
+
 
 sketchybar --update

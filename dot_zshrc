@@ -11,6 +11,11 @@ compinit
 #  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 #fi
 
+alias port="/opt/local/bin/port"
+alias rofi="/opt/local/bin/rofi"
+
+alias muteMic="~/.config/scripts/togglemic.sh"
+
 alias cat="bat"
 
 alias ls="lsd"
