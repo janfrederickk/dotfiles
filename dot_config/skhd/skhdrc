@@ -55,5 +55,8 @@ ctrl + shift - t : alacritty msg create-window
 # open chrome
 ctrl + shift - b : open -n -a "Google Chrome"
 
+# spotify
+ctrl + alt - p: osascript -e 'tell application "Spotify" to playpause'
+
 # mute microphone complete
-ctrl + shift - m : ../scripts/togglemic.sh
+ctrl + alt - m : sh ~/.config/scripts/togglemic.sh
