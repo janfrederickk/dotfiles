@@ -69,6 +69,8 @@ update ()
                               background.color=0x00000000
           --set spotify.anchor drawing=on                      )
   sketchybar -m "${args[@]}"
+
+  sketchybar --set spotify.anchor label="$ARTIST: $TRACK"
 }
 
 scrubbing() {

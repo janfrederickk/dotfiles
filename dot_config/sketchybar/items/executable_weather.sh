@@ -14,14 +14,14 @@ weather_current=(
 
 weather_daily_top=(
     label.font="$FONT:Heavy:10"
-	y_offset=4
+	y_offset=7
     update_freq=3000
     script="$PLUGIN_DIR/weather.sh"
 )
 
 weather_daily_bottom=(
     label.font="$FONT:Heavy:10"
-	y_offset=-8
+	y_offset=-7
 	background.padding_right=-70
     update_freq=3000
     script="$PLUGIN_DIR/weather.sh"
