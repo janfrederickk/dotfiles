@@ -55,48 +55,53 @@ NETWORK=
 NETWORK_DOWN=
 NETWORK_UP=
 
-WEATHER_0= #Clear sky
+WEATHER=()
 
-WEATHER_1= #Mainly clear
-WEATHER_2= #partly cloudy
-WEATHER_3= #overcast
+WEATHER[1]=1
+WEATHER[3]=3
 
-#same
-WEATHER_45= #Fog
-WEATHER_48= #depositing rime fog
+WEATHER[0]= #Clear sky
 
-#same
-WEATHER_51= #Drizzle: Light
-WEATHER_53= #Drizzle: moderate
-WEATHER_55= #Drizzle: dense intensity
-WEATHER_56= #Freezing Drizzle: Light
-WEATHER_57= #Freezing Drizzle: dense intensity
+WEATHER[1]= #Mainly clear
+WEATHER[2]= #partly cloudy
+WEATHER[3]= #overcast
 
 #same
-WEATHER_61= #Rain: Slight
-WEATHER_63= #Rain: moderate
-WEATHER_65= #Rain: heavy intensity
+WEATHER[45]= #Fog
+WEATHER[48]= #depositing rime fog
 
 #same
-WEATHER_66=󰙿 #Freezing Rain: Light
-WEATHER_67=󰙿 #Freezing Rain: heavy intensity
-
-WEATHER_71= #Snow fall: Slight
-WEATHER_73= #Snow fall: moderate
-WEATHER_75= #Snow fall: heavy intensity
-
-WEATHER_77= #Snow grains
+WEATHER[51]= #Drizzle: Light
+WEATHER[53]= #Drizzle: moderate
+WEATHER[55]= #Drizzle: dense intensity
+WEATHER[56]= #Freezing Drizzle: Light
+WEATHER[57]= #Freezing Drizzle: dense intensity
 
 #same
-WEATHER_80= #Rain showers: Slight
-WEATHER_81= #Rain showers: moderate
-WEATHER_82= #Rain showers: violent
+WEATHER[61]= #Rain: Slight
+WEATHER[63]= #Rain: moderate
+WEATHER[65]= #Rain: heavy intensity
 
 #same
-WEATHER_85= #Snow showers: slight
-WEATHER_86= #Snow showers: heavy
+WEATHER[66]=󰙿 #Freezing Rain: Light
+WEATHER[67]=󰙿 #Freezing Rain: heavy intensity
 
-WEATHER_95= #Thunderstorm: Slight or moderate
+WEATHER[71]= #Snow fall: Slight
+WEATHER[73]= #Snow fall: moderate
+WEATHER[75]= #Snow fall: heavy intensity
 
-WEATHER_96= #Thunderstorm with slight hail
-WEATHER_99= #Thunderstorm with heavy hail
+WEATHER[77]= #Snow grains
+
+#same
+WEATHER[80]= #Rain showers: Slight
+WEATHER[81]= #Rain showers: moderate
+WEATHER[82]= #Rain showers: violent
+
+#same
+WEATHER[85]= #Snow showers: slight
+WEATHER[86]= #Snow showers: heavy
+
+WEATHER[95]= #Thunderstorm: Slight or moderate
+
+WEATHER[96]= #Thunderstorm with slight hail
+WEATHER[99]= #Thunderstorm with heavy hail

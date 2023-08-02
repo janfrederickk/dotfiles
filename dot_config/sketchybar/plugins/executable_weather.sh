@@ -17,78 +17,7 @@ echo "Current weathercode $currentweathercode"
 
 sketchybar -m --set weather_current label="$currenttemperature °C"
 
-case $dailyweathercode in
-
-    0)
-    icon_result=$WEATHER_0
-    ;;
-
-    1)
-    icon_result=$WEATHER_1
-    ;;
-
-    2)
-    icon_result=$WEATHER_2
-    ;;
-
-    3)
-    icon_result=$WEATHER_3
-    ;;
-
-    45 | 46)
-    icon_result=$WEATHER_45
-    ;;
-
-    51 | 52 | 53 | 55 | 56 | 57)
-    icon_result=$WEATHER_51
-    ;;
-
-    61 | 63 | 65)
-    icon_result=$WEATHER_61
-    ;;
-
-    66 | 67)
-    icon_result=$WEATHER_66
-    ;;
-
-    71)
-    icon_result=$WEATHER_71
-    ;;
-
-    72)
-    icon_result=$WEATHER_72
-    ;;
-
-    73)
-    icon_result=$WEATHER_73
-    ;;
-
-    77)
-    icon_result=$WEATHER_77
-    ;;
-
-    80 | 81 | 82)
-    icon_result=$WEATHER_80
-    ;;
-
-    85 | 86 | 82)
-    icon_result=$WEATHER_85
-    ;;
-
-    95)
-    icon_result=$WEATHER_95
-    ;;
-
-    96)
-    icon_result=$WEATHER_96
-    ;;
-
-    99)
-    icon_result=$WEATHER_99
-    ;;
-esac
-
-sketchybar -m --set weather_current icon=$icon_result
+sketchybar -m --set weather_current icon=${WEATHER[dailyweathercode]}
 
 sketchybar -m --set weather_daily_top label="H: $dailymaxtemp °C"
 sketchybar -m --set weather_daily_bottom label="L: $dailymintemp °C"
