@@ -60,3 +60,7 @@ ctrl + alt - p: osascript -e 'tell application "Spotify" to playpause'
 
 # mute microphone complete
 ctrl + alt - m : sh ~/.config/scripts/togglemic.sh
+
+# switch input and output device
+ctrl + alt - i : SwitchAudioSource -n -t input
+ctrl + alt - o : SwitchAudioSource -n -t output

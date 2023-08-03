@@ -18,10 +18,10 @@ volume_change() {
     *) ICON=$VOLUME_100
   esac
 
-  sketchybar --set volume_icon label=$ICON
+  sketchybar --set volume_icon icon=$ICON
 
   sketchybar --set $NAME slider.percentage=$INFO \
-             --animate tanh 30 --set $NAME slider.width=$WIDTH 
+             --animate tanh 30 --set $NAME slider.width=$WIDTH
 
   sleep 2
 
@@ -54,3 +54,6 @@ case "$SENDER" in
   "mouse.exited") mouse_exited
   ;;
 esac
+
+CURRENT_OUTPUT=$(SwitchAudioSource -c -t output)
+sketchybar --set volume_icon label=$CURRENT_OUTPUT
