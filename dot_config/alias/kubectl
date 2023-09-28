@@ -1,3 +1,7 @@
+function wk8s {
+    watch "kubectl get helmcharts.source.toolkit.fluxcd.io,gitrepositories.source.toolkit.fluxcd.io,helmreleases.helm.toolkit.fluxcd.io,kustomizations.kustomize.toolkit.fluxcd.io -A"
+}
+
 alias kbc="kubectl"
 
 alias kbcgp="kubectl get pods"
@@ -18,7 +22,7 @@ function kbgpl {
 }
 
 function kbgpl2 {
-    kubectl get pods --all-namespaces -o jsonpath='{range .items[*]}{"\n"}{.metadata.namespace}{range .spec.containers[*]}{"\n"}{.name};{.resources.requests.memory};{.resources.limits.memory}{end}{end}'   
+    kubectl get pods --all-namespaces -o jsonpath='{range .items[*]}{"\n"}{.metadata.namespace}{range .spec.containers[*]}{"\n"}{.name};{.resources.requests.memory};{.resources.limits.memory}{end}{end}'
 }
 
 function kbgpl2csv {
@@ -31,7 +35,7 @@ function kbgplcsv {
 }
 
 
-function kbl { 
+function kbl {
     echo "nodes at $(kbcc)"
     kubectl get nodes -o wide
     echo ""
@@ -45,14 +49,14 @@ function kbl {
 }
 
 function kbla {
-    kubectl get namespaces --output custom-columns="Name":.metadata.name --no-headers | while read -r line                                                                                                                                                                          
+    kubectl get namespaces --output custom-columns="Name":.metadata.name --no-headers | while read -r line
         do
             case $line in "gatekeeper-system"|"kube-system"|"kube-node-lease"|"kube-public")
                 ;;
             *)
                 echo "namespace $line"
                 echo "------------------------------"
-                echo "nodes at $(kbcc) at namespace $line" 
+                echo "nodes at $(kbcc) at namespace $line"
                 kubectl get pods --namespace $line
 
                 echo ""
@@ -70,6 +74,4 @@ function kbla {
         done;
 }
 
-function wk8s {
-    watch "kubectl get helmcharts.source.toolkit.fluxcd.io,gitrepositories.source.toolkit.fluxcd.io,helmreleases.helm.toolkit.fluxcd.io,kustomizations.kustomize.toolkit.fluxcd.io -n flux-system"
-}
+

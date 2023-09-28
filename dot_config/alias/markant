@@ -6,3 +6,8 @@ rdmfsec() {
     export TF_VAR_client_secret="`az keyvault secret show --name dmf-tf-service-principal-secret --vault kv-initmarkantdevops  --query value -o tsv`"
 }
 
+docmateinit(){
+    python3 -m venv venv
+    source venv/bin/activate
+    pip3 install -r "$(git rev-parse --show-toplevel)/requirements.txt"
+}

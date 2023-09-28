@@ -37,6 +37,13 @@ function gpsub(){
     git branch --set-upstream-to=origin/$(git branch --show-current) $(git branch --show-current)
 }
 
+function gmvb(){
+    git branch -m $1 $2
+    git push origin --delete $1
+    git branch --unset-upstram $2
+    gpsub
+}
+
 function gsic(){
     git diff --stat origin/$(git branch --show-current);
     read -s -k '?Press any key to continue.'
