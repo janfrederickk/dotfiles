@@ -16,6 +16,7 @@ alias rofi="/opt/local/bin/rofi"
 
 alias muteMic="~/.config/scripts/togglemic.sh"
 
+alias xargs="/opt/homebrew/bin/gxargs"
 alias cat="bat"
 
 alias ls="lsd"
@@ -67,10 +68,12 @@ source <(helm completion zsh)
 source <(flux completion zsh)
 source <(chezmoi completion zsh)
 source <(docker completion zsh)
+source <(cmctl completion zsh)
 #source <(/opt/homebrew/opt/asdf/libexec/completions zsh)
 source ~/.config/zsh/az.completion
 
 export GREP_OPTIONS='--color=always'
+export KUBE_EDITOR="/opt/homebrew/bin/nvim"
 
 alias teectl="~/bin/teectl"
 
