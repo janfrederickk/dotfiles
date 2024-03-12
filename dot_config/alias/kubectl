@@ -15,6 +15,14 @@ alias kbdpc="kubectl delete pod --field-selector=status.phase==Succeeded"
 alias kblpe="kubectl get pod --field-selector=status.phase==Failed"
 alias kbdpe="kubectl delete pod --field-selector=status.phase==Failed"
 
+# Completed Jobs
+alias kbljc="kubectl get jobs --field-selector=status.successful=1"
+alias kbdjc="kubectl delete jobs --field-selector=status.successful=1"
+
+# Failed Jobs
+alias kblje="kubectl get jobs --field-selector=status.successful!=1"
+alias kbdje="kubectl delete jobs --field-selector=status.successful!=1"
+
 alias kbcc="kubectl config current-context"
 
 function kbgpl {

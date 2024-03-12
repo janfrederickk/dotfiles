@@ -16,7 +16,7 @@ alias rofi="/opt/local/bin/rofi"
 
 alias muteMic="~/.config/scripts/togglemic.sh"
 
-alias xargs="/opt/homebrew/bin/gxargs"
+#alias xargs="/opt/homebrew/bin/gxargs"
 alias cat="bat"
 
 alias ls="lsd"
@@ -82,3 +82,4 @@ alias teectl="~/bin/teectl"
 eval "$(starship init zsh)"
 export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+export PATH=$PATH:~/bin
