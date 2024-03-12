@@ -8,9 +8,9 @@ rdmfsec() {
 
 runallmetaminder () {
 	echo "removing old jobs"
-	kubectl get cronjobs.batch -n datahub -o json | jq -r '.items[] | select(.metadata.name | test("metaminder-")).metadata.name' | xargs -I{} kubectl delete jobs.batch -n datahub {}-manual
+	kubectl get cronjobs.batch -n metaminder -o json | jq -r '.items[] | select(.metadata.name | test("metaminder-")).metadata.name' | xargs -I{} kubectl delete jobs.batch -n metaminder {}-manual
 	echo "start new cronjobs"
-	kubectl get cronjobs.batch -n datahub -o json | jq -r '.items[] | select(.metadata.name | test("metaminder-")).metadata.name' | xargs -I{} kubectl create job -n datahub --from=cronjob/{} {}-manual
+	kubectl get cronjobs.batch -n metaminder -o json | jq -r '.items[] | select(.metadata.name | test("metaminder-")).metadata.name' | xargs -I{} kubectl create job -n metaminder --from=cronjob/{} {}-manual
 }
 
 docmateinit(){
