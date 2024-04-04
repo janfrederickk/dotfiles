@@ -69,6 +69,7 @@ source <(flux completion zsh)
 source <(chezmoi completion zsh)
 source <(docker completion zsh)
 source <(cmctl completion zsh)
+source <(mirrord completion zsh)
 #source <(/opt/homebrew/opt/asdf/libexec/completions zsh)
 source ~/.config/zsh/az.completion
 
