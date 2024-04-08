@@ -80,6 +80,8 @@ alias teectl="~/bin/teectl"
 
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
 
+eval "$(direnv hook zsh)"
+
 eval "$(starship init zsh)"
 export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
