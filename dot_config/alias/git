@@ -53,6 +53,8 @@ function gsic(){
 alias gf="git fetch"
 alias gp="git pull"
 
+alias gdf="git diff --cached"
+
 alias gco="git checkout"
 alias gcom="git checkout main"
 
