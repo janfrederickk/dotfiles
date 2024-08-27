@@ -15,6 +15,7 @@ tf_prompt_info() {
 alias tf=terraform
 
 alias tfi='tf init'
+alias tfiu='tf init -upgrade'
 
 alias tfp='tf plan'
 alias tfip='tfi && tfp'
