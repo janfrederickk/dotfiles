@@ -22,7 +22,7 @@ font:
     style: Bold Italic
 
   # Point size
-  size: 10.0
+  size: 14.0
 
 import:
  - ~/.config/alacritty/themes/afterglow.yaml
