@@ -93,4 +93,8 @@ eval "$(direnv hook zsh)"
 eval "$(starship init zsh)"
 export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+#export PATH="/opt/homebrew/bin/pycharm-ce"
 export PATH=$PATH:~/bin
+
+
+complete -o nospace -C /opt/homebrew/bin/terragrunt terragrunt
