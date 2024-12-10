@@ -1,0 +1,66 @@
+function venvchamp() {
+    local current_dir=$(pwd)
+    local dir_name=$(basename "$current_dir")
+    local venv_dir="$current_dir/venv-$dir_name"
+    local active_venv=${VIRTUAL_ENV:-""}
+
+    # Helper function to remove the venv
+    function remove_venv() {
+        echo "🗑️ Removing existing virtual environment at $venv_dir"
+        rm -rf "$venv_dir"
+    }
+
+    # Activate the virtual environment
+    function activate_venv() {
+        if [[ -f "$venv_dir/bin/activate" ]]; then
+            echo "🎉 Activating virtual environment at $venv_dir"
+            source "$venv_dir/bin/activate"
+        else
+            echo "❌ Error: Activation script not found in $venv_dir"
+        fi
+    }
+
+    # Check if there's already a venv in the current folder
+    if [[ -d "$venv_dir" ]]; then
+        echo "⚠️ A virtual environment already exists in the current folder: $venv_dir"
+
+        if [[ "$active_venv" == "$venv_dir" ]]; then
+            echo "✅ The current active virtual environment is the one in this folder."
+            echo ""
+            echo "🔄 1) Remove and create a new virtual environment"
+            echo "🔁 2) Reuse the existing virtual environment"
+        else
+            echo "🚨 The current active virtual environment is different: $active_venv"
+            echo ""
+            echo "🔄 1) Remove the existing virtual environment and create a new one"
+            echo "🔁 2) Create a new virtual environment without removing the existing one"
+        fi
+
+        echo '💬 Choose an option (1/2):'
+        read -r choice
+
+        if [[ "$choice" == "1" ]]; then
+            remove_venv
+            python3 -m venv "$venv_dir"
+            echo "🎉 New virtual environment created at $venv_dir"
+            activate_venv
+        elif [[ "$choice" == "2" ]]; then
+            if [[ ! -d "$venv_dir/bin" ]]; then
+                echo "⚠️ Existing virtual environment appears to be incomplete. Recreating..."
+                remove_venv
+                python3 -m venv "$venv_dir"
+                echo "🎉 New virtual environment created at $venv_dir"
+            fi
+            activate_venv
+        else
+            echo "❌ Invalid choice. Aborting."
+            return
+        fi
+    else
+        echo "🚫 No virtual environment found in the current folder."
+        echo "🔧 Creating a new virtual environment..."
+        python3 -m venv "$venv_dir"
+        echo "🎉 New virtual environment created at $venv_dir"
+        activate_venv
+    fi
+}

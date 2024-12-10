@@ -54,6 +54,7 @@ source ~/.config/alias/git
 source ~/.config/alias/chezmoi
 source ~/.config/alias/kubectl
 source ~/.config/alias/markant
+source ~/.config/alias/python
 
 # Load zsh plugins
 source ~/dev/git/zsh-autocomplete/zsh-autocomplete.plugin.zsh
